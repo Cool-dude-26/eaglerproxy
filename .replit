@@ -1,28 +1,10 @@
-run = "chmod u+x ./replit_launch.sh && ./replit_launch.sh"
-hidden = [".build", ".config"]
-compile = "chmod u+x ./.config/build.sh && ./.config/build.sh"
+run = "npm install && npx tsc && node build/index.js"
 
 [packager]
 language = "nodejs"
 
-[packager.features]
-enabledForHosting = false
-packageSearch = true
-guessImports = true
-
 [nix]
-channel = "stable-22_11"
-
-[gitHubImport]
-requiredFiles = [".replit", "replit.nix", ".config"]
-
-[languages]
-
-[languages.typescript]
-pattern = "**/{*.ts,*.js,*.tsx,*.jsx}"
+channel = "stable-24_05"
 
 [languages.typescript.languageServer]
 start = "typescript-language-server --stdio"
-
-[deployment]
-run = ["sh", "-c"]
