@@ -3,7 +3,6 @@
     "module": "esnext",
     "esModuleInterop": true,
     "target": "ESNext",
-    "moduleResolution": "node",
     "ignoreDeprecations": "5108",
     "sourceMap": false,
     "outDir": "build",
